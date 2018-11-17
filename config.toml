@@ -1,0 +1,48 @@
+languageCode = "en-us"
+title = "jefftech"
+baseurl = "https://jefftech.co.uk/"
+theme = "hyde-hyde"
+copyright = "Jeffrey Smith"
+
+[Author]
+	name = "Jeff Smith"
+
+[Permalinks]
+	blog = "/:year/:month/:filename/"
+	code = ":/filename/"
+
+[Taxonomies]
+	tag = "tags"
+	series = "series"
+	series-desc = "series-desc"
+
+[params]
+	author = "Jeff Smith"
+	title = "jefftech"
+	authorimage = "profile.jpg"
+	themeColor = "theme-base-0d"
+	#layoutReverse = true
+	#toc = "tocbot"	
+
+[params.social]
+	twitter = "jeffreysmith82"
+	github = "jeffsmith82"
+
+[[menu.main]]
+	name = "Posts"
+	weight = 100
+	identifier = "post"
+	url = "/posts/"
+
+[[menu.main]]
+	name = "Portfolio"
+	identifier = "portfolio"
+	weight = 200
+	url = "/portfolio/"
+
+[[menu.main]]
+	name = "About"
+	identifier = "about"
+	weight = 300
+	url = "/about/"
+	

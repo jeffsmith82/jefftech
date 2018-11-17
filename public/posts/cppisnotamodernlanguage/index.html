@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    
+    
+
+
+    <head>
+    <link href="https://gmpg.org/xfn/11" rel="profile">
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Cache-Control" content="public" />
+<!-- Enable responsiveness on mobile devices -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.52-DEV" />
+
+    
+    
+    
+
+<title>cpp is not a modern langauge • jefftech</title>
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="cpp is not a modern langauge"/>
+<meta name="twitter:description" content="I have read alot about C&#43;&#43; recently as I have been involved in trying to port a medium sized collection of c&#43;&#43; apps from Windows to Linux. From everything I have read there are two types of c&#43;&#43; code, pre c&#43;&#43;11 and post c&#43;&#43;11 which everyone seems to refer to as modern c&#43;&#43;. From what i have found this is partially true.
+My normal roll is team lead for our cloud team so I spend a fair bit of time on a Linux command line, in fact im writing this blog post in vim :-) so porting something from windows to Linux would make my life easier as Linux is much easier to manage then windows so thought i would pitch in."/>
+
+<meta property="og:title" content="cpp is not a modern langauge" />
+<meta property="og:description" content="I have read alot about C&#43;&#43; recently as I have been involved in trying to port a medium sized collection of c&#43;&#43; apps from Windows to Linux. From everything I have read there are two types of c&#43;&#43; code, pre c&#43;&#43;11 and post c&#43;&#43;11 which everyone seems to refer to as modern c&#43;&#43;. From what i have found this is partially true.
+My normal roll is team lead for our cloud team so I spend a fair bit of time on a Linux command line, in fact im writing this blog post in vim :-) so porting something from windows to Linux would make my life easier as Linux is much easier to manage then windows so thought i would pitch in." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://jefftech.co.uk/posts/cppisnotamodernlanguage/" /><meta property="article:published_time" content="2018-04-14T09:30:32&#43;01:00"/>
+<meta property="article:modified_time" content="2018-04-14T09:30:32&#43;01:00"/><meta property="og:site_name" content="jefftech" />
+
+
+    
+
+
+
+
+
+
+<link rel="stylesheet" href="/scss/hyde-hyde.9181f25ed2263aeb878ec6f8a84f10c4ebb16150000fca8767308880bdde5ca0.css" integrity="sha256-kYHyXtImOuuHjsb4qE8QxOuxYVAAD8qHZzCIgL3eXKA=">
+
+
+<link rel="stylesheet" href="/scss/print.2744dcbf8a0b2e74f8a50e4b34e5f441be7cf93cc7de27029121c6a09f9e77bc.css" integrity="sha256-J0Tcv4oLLnT4pQ5LNOX0Qb58&#43;TzH3icCkSHGoJ&#43;ed7w=" media="print">
+
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+    <link rel="shortcut icon" href="/favicon.png">
+    
+
+</head>
+
+
+    <body class="theme-base-0d ">
+    
+<div class="sidebar">
+  <div class="container ">
+    <div class="sidebar-about">
+      <span class="site__title">
+        <a href="https://jefftech.co.uk/">jefftech</a>
+      </span>
+      
+      
+      
+      <div class="author-image">
+        <img src="https://jefftech.co.uk//profile.jpg" alt="Author Image" class="img--circle img--headshot element--center">
+      </div>
+      
+      <p class="site__description">
+        
+      </p>
+    </div>
+    <div class="collapsible-menu">
+      <input type="checkbox" id="menuToggle">
+      <label for="menuToggle">jefftech</label>
+      <div class="menu-content">
+        <div>
+	<ul class="sidebar-nav">
+		 
+		 
+			 
+				<li>
+					<a href="/posts/">
+						<span>Posts</span>
+					</a>
+				</li>
+			 
+		 
+			 
+				<li>
+					<a href="/portfolio/">
+						<span>Portfolio</span>
+					</a>
+				</li>
+			 
+		 
+			 
+				<li>
+					<a href="/about/">
+						<span>About</span>
+					</a>
+				</li>
+			 
+		
+		</li>
+	</ul>
+</div>
+
+        <section class="social">
+	
+	<a href="https://twitter.com/jeffreysmith82" rel="me"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	<a href="https://github.com/jeffsmith82" rel="me"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</section>
+
+      </div>
+    </div>
+    <div class="copyright">
+  &copy; 2018 Jeff Smith.
+  <a href="https://creativecommons.org/licenses/by-sa/4.0">Some Rights Reserved</a>.
+  Built with <a href="https://gohugo.io">Hugo</a> ❤️ <a href="https://github.com/htr3n/hyde-hyde">hyde-hyde</a>.
+  
+</div>
+
+  </div>
+</div>
+
+        <div class="content container">
+            
+    <article>
+  <header>
+    <h1>cpp is not a modern langauge</h1>
+    
+    
+<div class="post__meta">
+    
+    
+      <i class="fas fa-calendar-alt"></i> Apr 14, 2018
+    
+    
+    
+    
+    
+    <br/>
+    <i class="fas fa-clock"></i> 8 min read
+</div>
+
+
+  </header>
+  
+  
+  <div class="post">
+    <p>I have read alot about C++ recently as I have been involved in trying to port a medium sized collection of c++ apps from Windows to Linux. From everything I have read there are two types of c++ code, pre c++11 and post c++11 which everyone seems to refer to as modern c++. From what i have found this is partially true.</p>
+
+<p>My normal roll is team lead for our cloud team so I spend a fair bit of time on a Linux command line, in fact im writing this blog post in vim :-) so porting something from windows to Linux would make my life easier as Linux is much easier to manage then windows so thought i would pitch in.</p>
+
+<h3>Build systems</h3>
+
+<p>I&rsquo;m used to writing go/php/rust code normally and have had to build things from source previously with ./configure &amp;&amp; make &amp;&amp; make install so how hard can this be right.</p>
+
+<p>C++ is painful when it comes to including third party libraries and I mean really painful, Everything uses it&rsquo;s own build tools there is no standard like go get or cargo. To get a few 3rd party pretty standard libs building like openssl, curl, boost, libmysql and v8 I ended up having to learn 3 different build systems. Make, cmake and ninja. Being the good cloud engineer i even tried to automate everything so I can just grab the latest tar.gz stick it in the right folder update a Makefile to the new version and it will build. This step took 3 weeks for me and im still not done as i need to setup static,shared,debug and release versions of all of them :-(</p>
+
+<p>To give you an idea of what a modern build system looks like, i use hugo for this blog. To get the latest version of hugo i did this and it produced the hugo binary in about 5 mins on my rasperberry pi.</p>
+
+<p>mkdir $HOME/src
+cd $HOME/src
+git clone <a href="https://github.com/gohugoio/hugo.git">https://github.com/gohugoio/hugo.git</a>
+cd hugo
+go install</p>
+
+<p>null has often been called the billion dollar mistake, I dread to think how much time and money has been wasted with every c++ project writing their own build system to sticky tape together something so they can do builds.</p>
+
+<h3>unicode support</h3>
+
+<p>I was trying to learn a bit more C++ so was looking for ways dip my feet in with small tasks so when we had a issue parsing an email address as defined by RFC 5322 i thought that should be pretty easy right. So i did what i normally do in this case and found that go has this abilty in the standard library so see how they do it and borrow their unit tests and maybe a few others to prove it works as expected. It wasnt long before I had to loop over a string and get the utf8 codepoints from it. Now in go or rust this is trivial so shouldn&rsquo;t be too hard in c++ right, you would be wrong.</p>
+
+<p>There is currently no unicode support for strings in the langauge at all that I can see. So how would i do this? The answer seems to be to include a third party library called ICU. I really really dont want to include any more third party libs it is just so painful to get it building I just gave up at this point.</p>
+
+<h3>let it bleed</h3>
+
+<p>I started to not like c++ when I learnt about Macros. I like it even less now i have been bitten more than once by macros being defined in a library that gets transitively included. Clearing up the code base and removing theses meant i get failures as something was defined and is no longer there :-(</p>
+
+<p>includes are done by name only so got bitten again where for some reason an old version of mysql.h was included in a 3rd party lib and by libmysql but it was picking up the old version and one of the structs had changed. Random crashes ensue and it took about a week to debug to find the issue.</p>
+
+<p>Even more fun where you have 2 names clash in this case sha2.h from libmysql and another with the same name in one of our company libs. This meant the build breaks for me but strangly for no one else. I have no idea why but again more wasted time.</p>
+
+<h3>Use muliple compilers</h3>
+
+<p>I have often read you should really build your code with multiple compilers that way your code has more chance of being standards compliant. We are cross compiling for both Windows and Linux so are using msvc and gcc so where forced to do this and again its painful.</p>
+
+<p>Code that builds perfectly in one refuses in another :-( then the game of working out why this is the case begins. Is it a compiler bug in one or the other, is it a compiler extension in one that makes it work, Is it some platform specific code or is my code just wrong.</p>
+
+<p>I was testing out boost beast for a webserver and got it working on GCC but there is a bug in msvc where generic lambda&rsquo;s cannot be used within a namespace. This is fixed in the not yet released version but when i upgrade I have to rebuild all the 3rd party libs again which is alot of work and not fun in any way. Any one else seeing a pattern here of one issue that causing pain everywhere else.</p>
+
+<h3>cpp is complex</h3>
+
+<p>So no one would be surprised by me saying c++ is a complex language. But the lie being pushed about its fine if you just stick to modern c++ really does annoy me. From what I understand the biggest change in c++11 was the inclusion of move semantics. It all sounds good on the surface but when you get to the difference between lvalues and rvalues I get lost. I have read multiple blog posts on the subject and then you read the comments saying the article is actully wrong it makes you think does anyone really understand this.</p>
+
+<p>This is the foundation of everything on top of it and pretending it&rsquo;s easy or not complex is a big lie. Tell this to any programmer when they get their first compiler error mentioning rvalues and down this rabbit hole they go.</p>
+
+<p>One of cpp&rsquo;s main strengths is the amount of code already out there being used which is going to be a majority old pre c++11 code so to read it you have to learn the old nasty stuff as well anyway.</p>
+
+<h3>Compile times</h3>
+
+<p>We have all seen the xkcd comic before havn&rsquo;t we ( <a href="https://xkcd.com/303/">https://xkcd.com/303/</a> ) and it is very true. I make a small change in one of our core libs and eveything has to be recompiled. On my 8 core machine this takes about 25 minutes. I dont know about you but i have forgotten what i was doing after 25 minutes. incremental builds of smaller sections of code are better but can still be longer than 2 minutes for me.</p>
+
+<p>Rob Pike did a write up for what descisions where made about go and why <a href="https://talks.golang.org/2012/splash.article">https://talks.golang.org/2012/splash.article</a> section 5 is very interesting. It basically says the reason for the slow compiles are the include system having to parse the same files over and over again which is causing the slowness.</p>
+
+<h3>Dirty little secret</h3>
+
+<p>I have been reading a fair bit of cpp recently and the more i read the more im convinced that cpp is still really c with classes. The way to include more code is identical and the benefit of this is you get to include the huge volume of c code silently and pretend its cpp.</p>
+
+<p>I recently had to write code to get the list of DNS server so trying to make sure this works across platforms I googled the standard way to do this. Surely asio would have a way to get this list. Turns out no so have to write platfrom specfic code.</p>
+
+<p>I ended up writing this on Linux and notices this is not actully cpp its plain c to do the work.</p>
+
+<p>#include <arpa/inet.h>
+#include <resolv.h>
+#include <iostream>
+int main(){
+    res_init();
+    std::cout &lt;&lt; _res.nscount &lt;&lt; std::endl;</p>
+
+<pre><code>for ( int i = 0; i &lt; _res.nscount ; i++){
+    auto a = _res.nsaddr_list[i].sin_addr;
+    char buffer[INET_ADDRSTRLEN];
+    const char* result = inet_ntop(AF_INET,&amp;a, buffer,INET_ADDRSTRLEN);
+    if (result == 0){
+        std::cout &lt;&lt; &quot;ERROR&quot; &lt;&lt; std::endl;
+    }
+        std::cout &lt;&lt; buffer &lt;&lt; std::endl;
+}
+return 0;
+</code></pre>
+
+<p>}</p>
+
+<p><h3>standard</h></p>
+
+<p>So are they going to fix any of this ? Not sure it going to be any time soon.
+*modules other langauges have them quick to get reproducable builds
+*its really just c with classes and some nice algo thrown on top still. c libs still make up core of langauge
+*no unicode support - made worse modules are shit
+*namespacing, includes macros oh my.
+*multiple compilers good + bad
+*still complex langauge hard to learn easy to make it crash.
+*compile times :-(
+*next train in 3 years.</p>
+
+  </div>
+  
+
+<div class="navigation navigation-single">
+    
+    
+    <a href="/posts/gotime/" class="navigation-next">
+      <span class="navigation-tittle">Gotime</span>
+      <i aria-hidden="true" class="fa fa-chevron-right"></i>
+    </a>
+    
+</div>
+
+
+  
+
+  
+    
+
+
+</article>
+
+
+        </div>
+        
+    
+<script defer src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"
+  integrity="sha384-4oV5EgaV02iISL2ban6c/RmotsABqE4yZxZLcYMAdG7FAPsyHYAPpywE9PJo+Khy"
+  crossorigin="anonymous">
+</script>
+
+
+    
+    
+    <script type="text/javascript">
+        
+        hljs.initHighlightingOnLoad();
+    </script>
+    
+
+
+
+
+    
+
+
+
+    </body>
+</html>

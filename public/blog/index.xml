@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blogs on jefftech</title>
+    <link>https://jefftech.co.uk/blog/</link>
+    <description>Recent content in Blogs on jefftech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Jeffrey Smith</copyright>
+    <lastBuildDate>Wed, 18 Apr 2018 08:23:19 +0100</lastBuildDate>
+    
+	<atom:link href="https://jefftech.co.uk/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Gotime</title>
+      <link>https://jefftech.co.uk/2018/04/gotime/</link>
+      <pubDate>Wed, 18 Apr 2018 08:23:19 +0100</pubDate>
+      
+      <guid>https://jefftech.co.uk/2018/04/gotime/</guid>
+      <description>So I thought it is about time I started blogging. I hear it is a good way to force yourself to properly learn new things by trying to explain them to others.
+So the first thing i want to learn is Time. Specifically how the programming lanagauge deals with time. So you could say its Go Time.
+What is time What exactly is time. Usually I go to wikipedia and see what it says.</description>
+    </item>
+    
+    <item>
+      <title>cpp is not a modern langauge</title>
+      <link>https://jefftech.co.uk/2018/04/cppisnotamodernlanguage/</link>
+      <pubDate>Sat, 14 Apr 2018 09:30:32 +0100</pubDate>
+      
+      <guid>https://jefftech.co.uk/2018/04/cppisnotamodernlanguage/</guid>
+      <description>I have read alot about C++ recently as I have been involved in trying to port a medium sized collection of c++ apps from Windows to Linux. From everything I have read there are two types of c++ code, pre c++11 and post c++11 which everyone seems to refer to as modern c++. From what i have found this is partially true.
+My normal roll is team lead for our cloud team so I spend a fair bit of time on a Linux command line, in fact im writing this blog post in vim :-) so porting something from windows to Linux would make my life easier as Linux is much easier to manage then windows so thought i would pitch in.</description>
+    </item>
+    
+  </channel>
+</rss>
